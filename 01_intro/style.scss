@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.box {
+    display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 20px;
+    grid-row-gap: 10px;
+    grid-column-gap: 40px;
+
+    &__item {
+        padding: 20px 0;
+        background: gold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
